@@ -1,0 +1,52 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package ejemplo2;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+/**
+ *
+ * @author LAB-USR-LNORTE
+ */
+public class ejecutor {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        //instancias de tipo vehiculo
+        vehiculo v1 =  new vehiculo("VE342", "toyota", "kiaa");
+        vehiculo v2 = new vehiculo ("1223343", "yafj", "afefrg"); 
+        vehiculo v3 = new vehiculo ("1ye5w3", "cher", "chebrole");
+        
+        
+        piloto p1 = new piloto("001", 4, "0394r");
+        piloto p2 = new piloto("002", 7, "0awdi");
+        piloto p3 = new piloto("003", 20, "01349f0");
+        
+        
+        //instancia de tipo arrraylist
+        ArrayList<piloto>equipocompetencia = new ArrayList<piloto>(); 
+        //agregar elementos al arraylist
+        
+        equipocompetencia.add(p1);
+        equipocompetencia.add(p2);
+        equipocompetencia.add(p3);
+        Iterator<piloto> itr = equipocompetencia.iterator(); 
+        
+        //iterramos todos los elementos 
+        
+        while (itr.hasNext()) {
+            piloto pi = (piloto)itr.next();
+            System.out.println(pi.toString() ); 
+        
+
+        
+        
+    }
+    }
+}
