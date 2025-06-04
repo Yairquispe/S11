@@ -1,0 +1,75 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package ejemplo2;
+
+/**
+ *
+ * @author LAB-USR-LNORTE
+ */
+public abstract class persona   { 
+    private String nombre;
+    private int edad;
+    private String fechanacimiento;
+    private String genero;
+    
+    public persona() {
+    }
+
+    public persona(String nombre, int edad, String fechanacimiento, String genero) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.fechanacimiento = fechanacimiento;
+        this.genero = genero;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getFechanacimiento() {
+        return fechanacimiento;
+    }
+
+    public void setFechanacimiento(String fechanacimiento) {
+        this.fechanacimiento = fechanacimiento;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    @Override
+    public String toString() {
+        return " n/ reporte>>"+
+                "nombre : "+ this.nombre+
+                "edad: "+this.edad+
+                "fecha de nacimiento : "+this.fechanacimiento+
+                "genero : "+this.genero
+                ;
+                       
+                
+    }
+    
+    
+    
+    
+    
+}
