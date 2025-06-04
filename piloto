@@ -1,0 +1,77 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package ejemplo2;
+
+/**
+ *
+ * @author LAB-USR-LNORTE
+ */
+public class piloto  {
+    private String idpiloto;
+    private int añosexp;
+    private String codlicen;
+    private vehiculo algunvehiculo; 
+//constructores 
+    public piloto() {
+    }
+
+    public piloto(String idpiloto, int añosexp, String codlicen) {
+        this.idpiloto = idpiloto;
+        this.añosexp = añosexp;
+        this.codlicen = codlicen;
+        this.algunvehiculo = algunvehiculo;
+    }
+
+//getters y setters 
+    public String getIdpiloto() {
+        return idpiloto;
+    }
+
+    public vehiculo getAlgunvehiculo() {
+        return algunvehiculo;
+    }
+
+    public void setAlgunvehiculo(vehiculo algunvehiculo) {
+        this.algunvehiculo = algunvehiculo;
+    }
+
+    public void setIdpiloto(String idpiloto) {
+        this.idpiloto = idpiloto;
+    }
+
+    public int getAñosexp() {
+        return añosexp;
+    }
+
+    public void setAñosexp(int añosexp) {
+        this.añosexp = añosexp;
+    }
+
+    public String getCodlicen() {
+        return codlicen;
+    }
+
+    public void setCodlicen(String codlicen) {
+        this.codlicen = codlicen;
+    }
+
+    @Override
+    public String toString() {
+        return "/n >> reporte de persona"+
+                "idpiloto: "+this.idpiloto+
+                "añosexp: "+ this.añosexp+
+                "nose: "+ this.algunvehiculo+
+                "codigo de licencia: "+this.codlicen+
+                super.toString()+ //infromacion de la persona, super es para llamar al la clase padre
+                algunvehiculo.toString() ;//busca en la clase vehiculo para devolver placa 
+        
+        
+        
+    }
+    
+    
+    
+    
+}
