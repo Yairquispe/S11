@@ -2,51 +2,47 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package ejemplo2;
-
-import java.util.ArrayList;
-import java.util.Iterator;
+package trabajo_poo;
 
 /**
  *
- * @author LAB-USR-LNORTE
+ * @author yairq
  */
+import java.util.ArrayList;
+import java.util.Iterator;
+
+
 public class ejecutor {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        
-        //instancias de tipo vehiculo
-        vehiculo v1 =  new vehiculo("VE342", "toyota", "kiaa");
-        vehiculo v2 = new vehiculo ("1223343", "yafj", "afefrg"); 
-        vehiculo v3 = new vehiculo ("1ye5w3", "cher", "chebrole");
-        
-        
-        piloto p1 = new piloto("001", 4, "0394r");
-        piloto p2 = new piloto("002", 7, "0awdi");
-        piloto p3 = new piloto("003", 20, "01349f0");
-        
-        
-        //instancia de tipo arrraylist
-        ArrayList<piloto>equipocompetencia = new ArrayList<piloto>(); 
-        //agregar elementos al arraylist
-        
-        equipocompetencia.add(p1);
-        equipocompetencia.add(p2);
-        equipocompetencia.add(p3);
-        Iterator<piloto> itr = equipocompetencia.iterator(); 
-        
-        //iterramos todos los elementos 
-        
-        while (itr.hasNext()) {
-            piloto pi = (piloto)itr.next();
-            System.out.println(pi.toString() ); 
-        
 
-        
-        
-    }
+    public static void main(String[] args) {
+        // Crear vehículos
+        vehiculo v1 = new vehiculo("VE342", "Corolla", "Toyota");
+        vehiculo v2 = new vehiculo("1223343", "Civic", "Honda");
+        vehiculo v3 = new vehiculo("1YE5W3", "Mustang", "Ford");
+
+        // Crear pilotos
+        piloto p1 = new piloto("001", 4, "0394R");
+        piloto p2 = new piloto("002", 7, "0AWDI");
+        piloto p3 = new piloto("003", 20, "01349F0");
+
+        // Asignar vehículos
+        p1.setAlgunvehiculo(v1);
+        p2.setAlgunvehiculo(v2);
+        p3.setAlgunvehiculo(v3);
+
+        // Agregar al equipo
+        ArrayList<piloto> equipoCompetencia = new ArrayList<>();
+        equipoCompetencia.add(p1);
+        equipoCompetencia.add(p2);
+        equipoCompetencia.add(p3);
+
+        // Mostrar información
+        for (piloto piloto : equipoCompetencia) {
+            System.out.println(piloto.toString());
+        }
     }
 }
